@@ -15,7 +15,7 @@ Only runs on google chrome.
 Using Codecollab servers, we are able to run Motpreneur for you! find it at this link: https://5krno-carlvoller.my.cclb.io/
 
 ## Made by
-https://github.com/That_guy_david
+https://github.com/Thatdavidguy
 
 https://github.com/wtvlol
 
