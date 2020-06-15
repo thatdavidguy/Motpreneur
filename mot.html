@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Motpreneur-Application</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Inline" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/mattdiamond/Recorderjs/08e7abd9/dist/recorder.js"></script>
+    <style>
+      body {
+        margin: 0px;
+      }
+      .square {
+        width: 30vw;
+        height: 30vw;
+        background-color: #F05D5E;
+        transform: rotate(45deg);
+        position: absolute;
+      }
+      .page {
+        height: 100vh;
+        width: 100vw;
+        position: relative;
+      }
+      .contentHolder {
+        display :flex;
+        flex-direction: column;
+        margin: 0px 15vw;
+        width: calc(min(100% - 30vw, 100vh));
+        height: 100%;
+        justify-content: center;
+      }
+      .items{
+          margin-top: 6px;
+          margin-bottom: 6px;
+      }
+      .meh {
+        font-family: Raleway;
+        font-size: min(2vw, 3vh);
+      }
+      .outpt {
+        font-weight: lighter;
+        border-width:2px;
+        padding: 2%;
+        border-style: solid;
+        overflow-y: scroll;
+      }
+      .cons {
+        color:white;
+        vertical-align: middle;
+      }
+      .circle{
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+        display:flex;
+        background-color: #F05D5E;
+        justify-content: center;
+        align-items: center;
+        line-height: 50px;
+        cursor: pointer;
+      }
+    </style>
+
+  </head>
+
+  <body data-gr-c-s-loaded="true">
+    <div style="height: 100vh;overflow:hidden;" id = "heightofpage">
+      <div class="page">
+        <div class="square" style="top: -15vw; right: -15vw;"></div>
+            <div class="contentHolder">
+                <h1 class="items" style="font-family:'Bungee Inline', cursive; font-size: min(5vw, 7vh);">Motpreneur</h1>
+                <div class="meh items">Click the buttons below to get started...</div>
+                <div class="items" style="display:flex;flex-direction:row;margin: 15px 0px;">
+                    <div style= "display:flex; flex-direction:row;"> </div>
+                    
+                    <div class ="circle" id = "recordBtn" onclick="STARTTHERECORDING()">
+                      <img style="height:7vh;width:7vw;"src="microphone.svg"></img>
+                    </div>
+
+                    <div class = "circle" style ="margin-left:20px" id = "stopBtn" onclick = "STOPTHERECORDING()">
+                        <img style="height:10vh;width:10vw;"src="postit.svg"></img>
+                    </div>
+
+                </div>
+                <p class="meh items" id="rec_stat" style="margin: 0px;font-size: min(1.5vw, 2.5vh); height:3vh"> </p>
+                <p class="outpt items meh" id="output" style="height: 30%;margin-top: 15px">
+                press the microphone icon to start
+                </p>
+
+                <div>
+                  <ol style = "counter-increment: step-counter;" id = "translist">
+
+                  </ol>
+                </div>
+            </div>
+        <div class="square" style="bottom: -167px; left: -167px;"></div>
+
+      </div>
+      <div class="page">
+          <div class="square" style="bottom: -147px; right: -147px;"></div>
+          <div class="contentHolder" style="justify-content: start;margin-top:2vh;">
+           <ol style = "counter-increment: step-counter;" id = "translist2">
+
+            </ol>
+         </div>
+      </div>
+    </div>
+    <script src="appy.js"></script>
+</body></html>
