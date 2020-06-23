@@ -10,8 +10,9 @@ function resizeScreen() {
 }
 resizeScreen();
 
-isrec = 0
-amount = 0
+isrec = 0;
+amount = 0;
+var pastext = [];
 var Recording = document.getElementById("rec_stat");
 function STARTTHERECORDING(){
   if (isrec === 0){
@@ -58,16 +59,19 @@ function openup(fromid){
   ree = document.getElementById(idee);
   if (document.getElementById(fromid).value == "open") {
     document.getElementById("button"+number).value = "close";
+    ree.innerHTML = pastext[number-1];
     ree.style.visibility = "visible";
   }
   else {
     document.getElementById("button"+number).value = "open";
+    document.getElementById("text"+number).innerHTML = "";
     ree.style.visibility = "hidden";
   }
 }
 
 function STOPTHERECORDING(){
-  
+  pastext.push(r.textContent);
+  console.log(pastext);
   Recording.innerHTML = "";
   isrec = 0;
   speechRecognizer.stop();
@@ -75,9 +79,10 @@ function STOPTHERECORDING(){
   document.getElementById("heightofpage").style.height = "200vh" 
   notes = document.getElementById("translist2");
   amount++;
-  if (amount >= 10){
-    document.getElementById("rec_stat").innerHTML ="You cannot have more than 10 notes."
+  if (amount >= 8){
+    document.getElementById("rec_stat").innerHTML ="You cannot have more than 8 notes."
   }
+  else{
   ideen =  'text'+amount;
   buttiden = "button"+amount;
   dividen = "div"+amount;
@@ -115,7 +120,7 @@ function STOPTHERECORDING(){
 
   var divetex = document.createElement('div');
   divetex.style.visibility = "hidden";
-  divetex.innerHTML += r.textContent;
+  //divetex.innerHTML += r.textContent;
   divetex.style.fontWeight = "lighter";
   divetex.style.marginTop = "10px"
   divetex.style.marginLeft = "10px"
@@ -127,4 +132,5 @@ function STOPTHERECORDING(){
   totaldiv.appendChild(diveit);
   totaldiv.appendChild(divetex);
   notes.insertBefore(totaldiv, notes.childNodes[0]);
+  }
 }
