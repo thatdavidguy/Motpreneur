@@ -1,6 +1,4 @@
 # Motpreneur
-![alt text](https://i.pinimg.com/474x/e8/46/a2/e846a258dfee1a59fb69b96b6653c11a.jpg)
-
 Motpreneur is French for “word taker”. As it suggests, Motpreneur helps you record and take down what your professor or lecturer has said, so that you would not miss out on anything just because you might have zoned out or gotten distracted by something else.
 
 # Compatibilities
